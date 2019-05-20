@@ -24,7 +24,6 @@ namespace BookStore {
             this.author = author;
             isTaken = false;
             this.numberPerBook = numberPerBook;
-            
             holdRequests = new List<HoldRequest>();
         }
 
