@@ -1,0 +1,6 @@
+/home/danny/RiderProjects/BookStore/BookStore/bin/Debug/BookStore.exe
+/home/danny/RiderProjects/BookStore/BookStore/bin/Debug/BookStore.pdb
+/home/danny/RiderProjects/BookStore/BookStore/obj/Debug/BookStore.csprojAssemblyReference.cache
+/home/danny/RiderProjects/BookStore/BookStore/obj/Debug/BookStore.csproj.CoreCompileInputs.cache
+/home/danny/RiderProjects/BookStore/BookStore/obj/Debug/BookStore.exe
+/home/danny/RiderProjects/BookStore/BookStore/obj/Debug/BookStore.pdb
