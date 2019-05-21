@@ -9,6 +9,7 @@
         <e p="Book.cs" t="Include" />
         <e p="BookStore.csproj" t="IncludeRecursive" />
         <e p="Borrower.cs" t="Include" />
+        <e p="DatabaseManagement.cs" t="Include" />
         <e p="HoldRequest.cs" t="Include" />
         <e p="Journal.cs" t="Include" />
         <e p="Library.cs" t="Include" />
@@ -23,6 +24,7 @@
         <e p="TextBook.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
       </e>
       <e p="BookStore.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace BookStore {
@@ -38,6 +39,30 @@ namespace BookStore {
         public void AddLoans(Loan l) => loans.Add(l);
         public void AddBook(Book b) => stockBooks.Add(b);
 
+        public void AddBook() {
+            Console.Write("Title: ");
+            String name = Console.ReadLine();
+            
+            Console.Write("Author: ");
+            String author = Console.ReadLine();
+            
+            Console.Write("Quantity of this book: ");
+            int no = Convert.ToInt32(Console.ReadLine());
+            
+            stockBooks.Add(new Book(name, author, no));
+
+        }
+
+        public void RemoveBook() {
+            Console.WriteLine("Use id for delete a book");
+            int id = Convert.ToInt32(Console.ReadLine());
+            foreach (var b in stockBooks) {
+                if (b.BookId == id) {
+                    stockBooks.Remove(b);
+                }
+            }
+        }
+
 
         public Borrower SearchPeople(int id) {
             foreach (var p in persons) {
@@ -49,7 +74,7 @@ namespace BookStore {
             return null;   
         }
 
-        public Book SearchBook() {
+        public void SearchBook() {
 
             int id = -1;
             int option;
@@ -79,14 +104,37 @@ namespace BookStore {
             }
             
             foreach (var b in stockBooks) {
-                if (b.Title.Equals(name) || b.BookId == id || b.Author.Equals(author) && b.Equals(name)) {
-                    Program.WriteLineColored(b.ToString(), ConsoleColor.Green);
-                    return b;                    
+                if (b.Title.Equals(name) || b.BookId == id || b.Author.Equals(author)) {
+                    Program.WriteLineColored("Successfully search \n" + b, ConsoleColor.Green);
+                }
+                else {
+                    Program.WriteLineColored(name + " doesn't exit in list of books !!!", ConsoleColor.Red);
                 }
             }
             
-            Program.WriteLineColored(name + " doesn't exit in list of books !!!", ConsoleColor.Red);
-            return null; 
+        }
+
+        public void EditBook() {
+            Program.WriteLineColored("Enter id: ", ConsoleColor.Black);
+            int id = Convert.ToInt32(Console.ReadLine());
+            foreach (var b in stockBooks) {
+                if (b.BookId == id) {
+                    
+                    Console.Write("Title: ");
+                    String name = Console.ReadLine();
+            
+                    Console.Write("Author: ");
+                    String author = Console.ReadLine();
+            
+                    Console.Write("Quantity of this book: ");
+                    int no = Convert.ToInt32(Console.ReadLine());
+
+                    b.Title = name;
+                    b.Author = author;
+                    b.NumberPerBook = no;
+                    
+                }
+            }
         }
 
         public void PrintDepositOfBook() {
